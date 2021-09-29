@@ -20,7 +20,7 @@
   },
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/bundle.js",
+  "main": "index.html",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "predeploy": "npm run build",
