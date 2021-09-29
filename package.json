@@ -20,7 +20,7 @@
   },
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "predeploy": "npm run build",
