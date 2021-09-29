@@ -1,4 +1,4 @@
-import { Command } from "../calculator";
+import { Command } from "../../calculator/calculator";
 
 function sub(x, y) {
   return +y - +x;

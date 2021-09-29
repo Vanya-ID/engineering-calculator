@@ -1,4 +1,4 @@
-import { Command } from "../calculator";
+import { Command } from "../../calculator/calculator";
 
 function root(x) {
   return x ** 0.5;

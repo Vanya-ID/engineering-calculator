@@ -1,5 +1,5 @@
-import { get_factorial } from "../../maths-func/get-factorial";
-import { Command } from "../calculator";
+import { get_factorial } from "./get-factorial";
+import { Command } from "../../calculator/calculator";
 
 export class FactorialCommand extends Command {
   constructor(x) {

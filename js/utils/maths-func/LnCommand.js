@@ -1,4 +1,4 @@
-import { Command } from "../calculator";
+import { Command } from "../../calculator/calculator";
 
 function ln(x) {
   return Math.log(x);

@@ -1,4 +1,4 @@
-import { Command } from "../calculator";
+import { Command } from "../../calculator/calculator";
 
 function percent(x, y) {
   return (x / 100) * y;

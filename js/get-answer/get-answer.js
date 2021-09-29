@@ -1,21 +1,28 @@
-import { array_of_numbers } from "./data";
-import { answer_input } from "./inserts";
-import { mathematical_calculations } from "./calculator/mathematical_calculations";
+import { ARRAY_OF_NUMBERS } from "../constants";
+import { answer_input } from "../index";
+import { mathematical_handler } from "../utils/maths-func/mathematical_handler";
 
 export const get_answer = (expr) => {
   const arr_of_numbers_and_signs = [];
   let pushing_elements = "";
   const copy_of_expr = [...expr];
-  copy_of_expr.map((element, index) => {
+
+  copy_of_expr.forEach((element, index) => {
     if (element === "") return;
     if (index === 0 && element === "-") {
       pushing_elements += element;
-    } else if (array_of_numbers.includes(element) || element === ".") {
+      return;
+    }
+    if (ARRAY_OF_NUMBERS.includes(element) || element === ".") {
       pushing_elements += element;
-    } else if (element === ",") {
+      return;
+    }
+    if (element === ",") {
       pushing_elements && arr_of_numbers_and_signs.push(pushing_elements);
       pushing_elements = "";
-    } else if (
+      return;
+    }
+    if (
       element === "-" &&
       copy_of_expr[index - 1] === "," &&
       copy_of_expr[index - 2] === ","
@@ -24,25 +31,13 @@ export const get_answer = (expr) => {
     } else {
       pushing_elements && arr_of_numbers_and_signs.push(pushing_elements);
       pushing_elements = "";
-      switch (element) {
-        case "^": {
-          mathematical_calculations(arr_of_numbers_and_signs, "**");
-          break;
-        }
-        case "%": {
-          mathematical_calculations(arr_of_numbers_and_signs, "/100*");
-          break;
-        }
-        case "√": {
-          mathematical_calculations(arr_of_numbers_and_signs, "**0.5");
-          break;
-        }
-        default: {
-          mathematical_calculations(arr_of_numbers_and_signs, element);
-        }
-      }
+      mathematical_handler(arr_of_numbers_and_signs, element);
     }
   });
+  return showAnswer(arr_of_numbers_and_signs);
+};
+
+const showAnswer = (arr_of_numbers_and_signs) => {
   const answer = Number.parseFloat(
     Number(arr_of_numbers_and_signs.join("")).toFixed(5)
   ).toString();

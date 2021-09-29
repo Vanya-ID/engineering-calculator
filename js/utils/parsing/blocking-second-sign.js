@@ -1,4 +1,4 @@
-import { answer_input } from "../inserts";
+import { answer_input } from "../../index";
 
 export const blockingSecondSign = (prev_element_is_sign, last_element) => {
   last_element = answer_input.textContent.slice(-1);

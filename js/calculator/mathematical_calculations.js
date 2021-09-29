@@ -1,14 +1,15 @@
-import { AddCommand } from "./commands/AddCommand";
-import { answer_input } from "../inserts";
+import { AddCommand } from "../utils/maths-func/AddCommand";
 import { Calculator } from "./calculator";
-import { MulCommand } from "./commands/MulCommand";
-import { SubCommand } from "./commands/SubCommand";
-import { DivCommand } from "./commands/DivCommand";
-import { RootCommand } from "./commands/RootCommand";
-import { FactorialCommand } from "./commands/FactorialCommand";
-import { PowCommand } from "./commands/PowCommand";
-import { PercentCommand } from "./commands/PercentCommand";
-import { LogCommand } from "./commands/LogCommand";
+import { MulCommand } from "../utils/maths-func/MulCommand";
+import { SubCommand } from "../utils/maths-func/SubCommand";
+import { DivCommand } from "../utils/maths-func/DivCommand";
+import { RootCommand } from "../utils/maths-func/RootCommand";
+import { FactorialCommand } from "../utils/maths-func/FactorialCommand";
+import { PowCommand } from "../utils/maths-func/PowCommand";
+import { PercentCommand } from "../utils/maths-func/PercentCommand";
+import { LogCommand } from "../utils/maths-func/LogCommand";
+import { answer_input } from "../index";
+import { LnCommand } from "../utils/maths-func/LnCommand";
 
 export function mathematical_calculations(array, command) {
   const calculator = new Calculator();

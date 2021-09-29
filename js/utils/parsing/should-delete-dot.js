@@ -1,4 +1,4 @@
-import { answer_input } from "../inserts";
+import { answer_input } from "../../index";
 
 export const shouldDeleteDot = (element, have_dot) => {
   if (element === ".") {

@@ -1,7 +1,6 @@
-import { answer_input } from "../inserts";
-import { reversePolishNotation } from "../reverse-polish-notation";
+import { reversePolishNotation } from "../../reverse-polish-notation/reverse-polish-notation";
+import { answer_input, memory_buttons } from "../../index";
 
-const memory_buttons = document.querySelectorAll(".memory");
 let memory_count = "";
 
 Array.from(memory_buttons).map((b) => {
