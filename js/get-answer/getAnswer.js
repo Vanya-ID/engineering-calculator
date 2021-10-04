@@ -1,6 +1,6 @@
 import { ARRAY_OF_NUMBERS } from "../constants";
-import { answer_input } from "../index";
-import { mathematical_handler } from "../utils/maths-func/mathematical_handler";
+import { mathematical_handler } from "../utils/maths-func/mathematicalHandler";
+import { showAnswer } from "../show-answer/showAnswer";
 
 export const get_answer = (expr) => {
   const arr_of_numbers_and_signs = [];
@@ -35,13 +35,4 @@ export const get_answer = (expr) => {
     }
   });
   return showAnswer(arr_of_numbers_and_signs);
-};
-
-const showAnswer = (arr_of_numbers_and_signs) => {
-  const answer = Number.parseFloat(
-    Number(arr_of_numbers_and_signs.join("")).toFixed(5)
-  ).toString();
-  if (answer_input) answer_input.textContent = answer;
-  if (answer === "NaN") if (answer_input) answer_input.textContent = "Error";
-  return answer;
 };

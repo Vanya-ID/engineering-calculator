@@ -1,7 +1,7 @@
-import { blockingSecondSign } from "../parsing/blocking-second-sign";
+import { blockingSecondSign } from "../parsing/blockingSecondSign";
 import { CAN_BE_FIRST, CONFIG, MATHEMATICAL_SIGNS } from "../../constants";
-import { shouldSetMultSign } from "../parsing/should-set-mult-sign";
-import { shouldDeleteDot } from "../parsing/should-delete-dot";
+import { shouldSetMultSign } from "../parsing/shouldSetMultSign";
+import { shouldDeleteDot } from "../parsing/shouldDeleteDot";
 import { answer_input } from "../../index";
 
 const liveSignParsing = () => {

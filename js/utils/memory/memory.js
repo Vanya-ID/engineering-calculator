@@ -1,4 +1,4 @@
-import { reversePolishNotation } from "../../reverse-polish-notation/reverse-polish-notation";
+import { reversePolishNotation } from "../../reverse-polish-notation/reversePolishNotation";
 import { answer_input, memory_buttons } from "../../index";
 
 let memory_count = "";

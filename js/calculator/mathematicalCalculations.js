@@ -11,7 +11,7 @@ import { LogCommand } from "../utils/maths-func/LogCommand";
 import { answer_input } from "../index";
 import { LnCommand } from "../utils/maths-func/LnCommand";
 
-export function mathematical_calculations(array, command) {
+export function mathematicalCalculations(array, command) {
   const calculator = new Calculator();
   switch (command) {
     case "*": {

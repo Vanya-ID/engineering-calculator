@@ -1,4 +1,4 @@
-import { reversePolishNotation } from "./reverse-polish-notation";
+import { reversePolishNotation } from "./reversePolishNotation";
 
 test("must evaluate the expression correctly", () => {
   expect(reversePolishNotation("1+2")).toBe("3");

@@ -1,4 +1,4 @@
-import { get_answer } from "./get-answer";
+import { get_answer } from "./getAnswer";
 
 test("after polish notation should evaluate correctly", () => {
   expect(get_answer("1,2,3,*+")).toBe("7");

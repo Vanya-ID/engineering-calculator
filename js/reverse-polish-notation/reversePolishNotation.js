@@ -1,5 +1,5 @@
 import { ARRAY_OF_NUMBERS, OPERATORS } from "../constants";
-import { get_answer } from "../get-answer/get-answer";
+import { get_answer } from "../get-answer/getAnswer";
 import { answer_input, equals } from "../index";
 import { firstStringParsing } from "../firstStringParsing/firststringParsing";
 
